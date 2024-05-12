@@ -1,6 +1,5 @@
-# Nixvim template
-
-This template gives you a good starting point for configuring nixvim standalone.
+# Nixvim config
+My nixvim config. Work in progress, migrating from lunarvim
 
 ## Configuring
 
