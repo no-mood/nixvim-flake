@@ -3,9 +3,9 @@
   #    See the README about individual language/framework/plugin snippets:
   #    https://github.com/rafamadriz/friendly-snippets
   # https://nix-community.github.io/nixvim/plugins/friendly-snippets.html
-  # plugins.friendly-snippets = {
-  #   enable = true;
-  # };
+  plugins.friendly-snippets = {
+    enable = true;
+  };
 
   plugins.lazydev.enable = true; # autoEnableSources not enough
   plugins.luasnip.enable = true; # autoEnableSources not enough
@@ -120,6 +120,11 @@
         # https://nix-community.github.io/nixvim/plugins/cmp-nvim-lsp-signature-help.html
         {
           name = "nvim_lsp_signature_help";
+        }
+        # https://nix-community.github.io/nixvim/plugins/copilot-cmp/index.html
+        {
+          name = "copilot";
+          group_index = 2;
         }
       ];
     };
