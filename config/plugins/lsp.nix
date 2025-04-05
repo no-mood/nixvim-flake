@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # Dependencies
   # { 'Bilal2453/luvit-meta', lazy = true },
   #
@@ -68,15 +69,15 @@
     #  - settings: Override the default settings passed when initializing the server.
     #        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     servers = {
-      # clangd = {
-      #   enable = true;
-      # };
+      clangd = {
+        enable = true;
+      };
       # gopls = {
       #   enable = true;
       # };
-      # pyright = {
-      #   enable = true;
-      # };
+      pyright = {
+        enable = true;
+      };
       # rust_analyzer = {
       #   enable = true;
       # };
@@ -107,6 +108,12 @@
           #   ];
           # };
         };
+      };
+      nil_ls = {
+        enable = true;
+      };
+      nixd = {
+        enable = true;
       };
     };
 
@@ -194,7 +201,10 @@
         # Execute a code action, usually your cursor needs to be on top of an error
         # or a suggestion from your LSP for this to activate.
         "<leader>ca" = {
-          mode = ["n" "x"];
+          mode = [
+            "n"
+            "x"
+          ];
           action = "code_action";
           desc = "LSP: [C]ode [A]ction";
         };
